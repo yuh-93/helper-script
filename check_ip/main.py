@@ -22,17 +22,14 @@ else:
         WEB_HOOK_URL,
         data=json.dumps(
             {
-                "text": "現在のIPが"
-                + str(ip_data)
-                + "から"
-                + str(ip_res["origin"])
-                + "に変わったよ",  # 通知内容
+                "text": f"現在のIPが{ip_data}から{ip_res['origin']}に変わったよ",  # 通知内容
                 "username": "ip notification",
                 "icon_emoji": ":smile_cat:",
                 "link_names": 1,
             }
         ),
     )
+
     f = open("ip.txt", "w")
     f.write(ip_res["origin"])
     f.close()
