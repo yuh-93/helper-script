@@ -1,0 +1,5 @@
+- name: Run uptime on all servers
+  hosts: servers
+  tasks:
+    - name: Run uptime
+      command: uptime
