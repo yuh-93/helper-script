@@ -1,4 +1,4 @@
-# IP Address Monitor
+# IP Monitor
 
 ## 概要
 このスクリプトは、現在のIPアドレスを定期的にチェックし、変更があった場合にSlackに通知を送信します。
