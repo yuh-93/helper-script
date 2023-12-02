@@ -1,10 +1,11 @@
 import unittest
 from mains.main import reorganize_release_notes
-class TestReleaseNotes(unittest.TestCase):
 
+
+class TestReleaseNotes(unittest.TestCase):
     def test_reorganize_release_notes(self):
         # テスト用の入力
-        test_input = (
+        test_input_md = (
             "## What's Changed\n"
             "* feat: Add new X-feature\n"
             "* fix: Fix A-bug\n"
@@ -14,7 +15,7 @@ class TestReleaseNotes(unittest.TestCase):
         )
 
         # 期待される出力
-        expected_output = (
+        expected_output_md = (
             "## What's Changed\n"
             "## feat\n"
             "* feat: Add new X-feature\n"
@@ -27,10 +28,12 @@ class TestReleaseNotes(unittest.TestCase):
         )
 
         # 実際の出力
-        actual_output = reorganize_release_notes(test_input)
+        actual_output = reorganize_release_notes(test_input_md)
 
         # 実際の出力と期待される出力を比較
-        self.assertEqual(actual_output, expected_output)
+        with self.subTest("リリースノートが整理される"):
+            self.assertEqual(actual_output, expected_output_md)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()
