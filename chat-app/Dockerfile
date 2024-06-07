@@ -1,5 +1,5 @@
 # ベースイメージとして公式のPythonイメージを使用
-FROM python:3.9
+FROM python:3.11-slim
 
 # 作業ディレクトリを設定
 WORKDIR /app
