@@ -8,7 +8,11 @@ pip3 install pre-commit black
 pre-commit install
 ```
 
-## ip_monitor
+## ip-monitor
 - 現在のIPを取得し変わったときに通知
-## reorganize_release_note
+## reorganize-release-note
 - githubのリリースノートをカテゴライズ
+## rm-iterm-log
+- itermのログを定期的に消す
+## vpn-auto-connect
+- wifiにつなぐと自動的にVPNへつなぐ
